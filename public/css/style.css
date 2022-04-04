@@ -1,2 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap");
+body {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+  font-family: "roboto", sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    max-width: 100%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content__entete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1px 0 15px 0;
+    margin-bottom: 5px;
+    background-color: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content__entete img {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .liste {
+    display: flex;
+    flex-direction: column;
+  }
+  .liste__localisation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #e6e6e5;
+    font-size: 20px;
+    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+  }
+  .liste__localisation i {
+    margin-right: 20px;
+  }
+  .liste__reservation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px 0 20px;
+    margin: 40px 0 0 0;
+    font-size: 16px;
+  }
+  .liste__reservation p {
+    margin-top: 0;
+    font-size: 18px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

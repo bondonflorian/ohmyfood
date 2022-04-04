@@ -1,6 +1,5 @@
 @import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/structure";
 @import "./layouts/form";
-
-.test01 {
-    color: $color;
-}
+@import "./pages/accueil";
