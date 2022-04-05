@@ -1,7 +1,6 @@
 .liste {
     @include mobile {
-        display: flex;
-        flex-direction: column;
+        @include section;
 
         &__localisation {
             @include displayrow;
@@ -33,4 +32,54 @@
             margin: 20px 0 0 0;
         }
     }
+}
+
+.fonctionnement {
+    @include mobile {
+        @include section;
+
+        & h2 {
+            margin: 60px 0 30px 15px;
+        }
+
+        &__grandblock {
+            @include displaycolumn;
+            margin-bottom: 80px
+        }
+
+        &__block {
+            @include displayrow;
+            width: 85%;
+            height: 70px;
+            margin-bottom: 20px;
+            background-color: $couleur-gris;
+            @include light;
+            border-radius: $radius;
+            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        &__chiffre {
+            @include displaycolumn;
+            background-color: $couleur-primaire;
+            color: white;
+            height: 25px;
+            width: 25px;
+            border-radius: 80px;
+            position: absolute;
+            left: 15px;
+            font-size: 14px;
+        }
+
+        & i {
+            position: absolute;
+            left: 65px;
+            color: grey;
+        }
+    }
+}
+
+.restaurant {
+    background-color: $couleur-gris;
+    @include light;
+    padding-top: 40px;
 }
