@@ -40,3 +40,7 @@
 @mixin dark {
     color: darken($couleur-tertiaire, 40%);
 }
+
+@mixin lightfooter {
+    background-color: lighten(black, 20%);
+}

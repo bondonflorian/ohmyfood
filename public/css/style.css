@@ -37,6 +37,30 @@ h1, h2, h3, p, .liste__bouton {
 }
 
 @media screen and (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #333333;
+    color: white;
+    padding-bottom: 50px;
+  }
+}
+.footer p {
+  margin: 0 0 10px 30px;
+  font-size: 22px;
+}
+.footer h4 {
+  margin: 30px 0 30px 30px;
+  font-family: "shrikhand";
+  font-size: 22px;
+}
+.footer i {
+  margin-right: 15px;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
   .liste {
     display: flex;
     flex-direction: column;
