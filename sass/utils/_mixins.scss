@@ -17,3 +17,17 @@
     justify-content: center;
     align-items: center;
 }
+
+@mixin btn {
+    width: 250px;
+    height: 60px;
+    border-radius: 50px;
+    background: linear-gradient(175deg, $couleur-secondaire 0%, $couleur-primaire 70%);
+    border: none;
+    font-size: 18px;
+    color: white;
+}
+
+@mixin light  {
+    background: lighten($couleur-gris, 5%);
+}

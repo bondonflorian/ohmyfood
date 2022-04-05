@@ -4,7 +4,7 @@ body {
   box-sizing: border-box;
 }
 
-h1, h2, h3, p {
+h1, h2, h3, p, .liste__bouton {
   font-family: "roboto", sans-serif;
 }
 
@@ -21,7 +21,7 @@ h1, h2, h3, p {
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding: 1px 0 15px 0;
+    padding: 30px 0 10px 0;
     margin-bottom: 5px;
     background-color: white;
   }
@@ -59,13 +59,24 @@ h1, h2, h3, p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px 0 20px;
-    margin: 40px 0 0 0;
+    padding: 30px 20px 60px 20px;
     font-size: 16px;
+    background-color: #e6e6e5;
+    background: #f3f3f2;
   }
   .liste__reservation p {
     margin-top: 0;
     font-size: 18px;
+  }
+  .liste__bouton {
+    width: 250px;
+    height: 60px;
+    border-radius: 50px;
+    background: linear-gradient(175deg, #FF79DA 0%, #9356DC 70%);
+    border: none;
+    font-size: 18px;
+    color: white;
+    margin: 20px 0 0 0;
   }
 }
 
