@@ -132,7 +132,52 @@ h1, h2, h3, p, .liste__bouton {
 .restaurant {
   background-color: #e6e6e5;
   background: #f3f3f2;
-  padding-top: 40px;
+  padding: 10px 0 40px 0;
+}
+.restaurant h2 {
+  margin: 60px 0 30px 15px;
+}
+.restaurant h3, .restaurant p {
+  margin: 5px 0 0 15px;
+}
+.restaurant__nouveau {
+  position: absolute;
+  right: 30px;
+  background-color: #99E2D0;
+  padding: 8px 15px;
+  border-radius: 3px;
+  margin: 15px 0 0 15px !important;
+  color: #278870;
+}
+.restaurant__grandblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.restaurant__petitblock {
+  background-color: white;
+  width: 90%;
+  height: 250px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+.restaurant__image img {
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+  margin: 0 0 10px 0;
+}
+.restaurant__description {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.restaurant__coeur {
+  padding: 0 20px 0 0;
+  font-size: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

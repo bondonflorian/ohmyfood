@@ -39,7 +39,7 @@
         @include section;
 
         & h2 {
-            margin: 60px 0 30px 15px;
+            margin: $margin-titre;
         }
 
         &__grandblock {
@@ -55,7 +55,7 @@
             background-color: $couleur-gris;
             @include light;
             border-radius: $radius;
-            box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: $shadow;
         }
 
         &__chiffre {
@@ -81,5 +81,55 @@
 .restaurant {
     background-color: $couleur-gris;
     @include light;
-    padding-top: 40px;
+    padding: 10px 0 40px 0;
+
+    & h2 {
+        margin: $margin-titre;
+    }
+
+    & h3, p {
+        margin: 5px 0 0 15px;
+    }
+
+    &__nouveau {
+        position: absolute;
+        right: 30px;
+        background-color: $couleur-tertiaire;
+        padding: 8px 15px;
+        border-radius: 3px;
+        margin: 15px 0 0 15px !important;
+        @include dark;
+    }
+
+    &__grandblock {
+        @include displaycolumn;
+    }
+
+    &__petitblock {
+        background-color: white;
+        width: 90%;
+        height: 250px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        box-shadow: $shadow;
+    }
+
+    &__image img {
+        height: 170px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: $radius-restaurant;
+        margin: 0 0 10px 0;
+    }
+
+    &__description {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__coeur {
+    padding: 0 20px 0 0;
+    font-size: 30px;
+    }
 }
