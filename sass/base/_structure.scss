@@ -4,6 +4,14 @@ body {
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 h1, h2, h3, p, .liste__bouton {
     font-family: 'roboto', sans-serif;
 }
@@ -58,7 +66,7 @@ h1, h2, h3, p, .liste__bouton {
     }
 
     & i {
-        margin-right: 15px;
+        margin-right: 10px;
         font-size: 18px;
     }
 
