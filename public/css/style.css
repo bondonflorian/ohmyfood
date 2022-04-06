@@ -7,9 +7,6 @@ body {
 a {
   text-decoration: none;
   color: black;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 h1, h2, h3, p, .liste__bouton {
@@ -34,7 +31,6 @@ h1, h2, h3, p, .liste__bouton {
     background-color: white;
   }
 }
-
 @media screen and (max-width: 768px) {
   .content__entete img {
     width: 200px;
@@ -42,6 +38,12 @@ h1, h2, h3, p, .liste__bouton {
     justify-content: center;
     align-items: center;
   }
+}
+.content__entete i {
+  position: absolute;
+  left: 20px;
+  top: 35px;
+  font-size: 22px;
 }
 
 @media screen and (max-width: 768px) {
@@ -184,8 +186,11 @@ h1, h2, h3, p, .liste__bouton {
 .restaurant__grandblock {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+.restaurant__grandblock > a {
+  display: flex;
   align-items: center;
+  justify-content: center;
 }
 .restaurant__petitblock {
   background-color: white;
@@ -210,6 +215,103 @@ h1, h2, h3, p, .liste__bouton {
 .restaurant__coeur {
   padding: 0 20px 0 0;
   font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .image img {
+    display: flex;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #e6e6e5;
+    background: #f3f3f2;
+    border-radius: 60px 60px 0 0;
+    margin-top: -20px;
+  }
+  .menu > h3 {
+    position: relative;
+    text-transform: uppercase;
+    margin: 20px 0 20px 25px;
+  }
+  .menu > h3:after {
+    content: "";
+    width: 50px;
+    height: 3px;
+    background: #99E2D0;
+    position: absolute;
+    left: 0px;
+    bottom: -5px;
+  }
+}
+.menu__titre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+}
+.menu__titre > h2 {
+  font-family: "shrikhand";
+  font-size: 30px;
+}
+.menu__titre > i {
+  font-size: 30px;
+}
+.menu__liste {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu__plat {
+  background-color: white;
+  margin: 0 0 15px 0;
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+.menu__plat > h3 {
+  margin: 15px 0 0 12px;
+}
+.menu__prix {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+.menu__prix > p {
+  margin: 10px 0;
+  padding-bottom: 2px;
+}
+.menu__prix > i {
+  display: none;
+}
+
+.content button {
+  width: 200px;
+  height: 60px;
+  border-radius: 50px;
+  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 70%);
+  border: none;
+  font-size: 18px;
+  color: white;
+  margin: 50px 0 100px 0;
+  font-family: "roboto";
+}
+
+.bouton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

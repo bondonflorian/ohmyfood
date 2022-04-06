@@ -33,6 +33,18 @@
     color: white;
 }
 
+@mixin commander {
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+    background: linear-gradient(175deg, $couleur-secondaire 0%, $couleur-primaire 70%);
+    border: none;
+    font-size: 18px;
+    color: white;
+    margin: 50px 0 100px 0;
+    font-family: 'roboto';
+}
+
 @mixin light  {
     background: lighten($couleur-gris, 5%);
 }
@@ -43,4 +55,8 @@
 
 @mixin lightfooter {
     background-color: lighten(black, 20%);
+}
+
+@mixin police-titre {
+    font-family: 'shrikhand';
 }

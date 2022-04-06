@@ -7,9 +7,6 @@ body {
 a {
     text-decoration: none;
     color: black;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 h1, h2, h3, p, .liste__bouton {
@@ -33,15 +30,23 @@ h1, h2, h3, p, .liste__bouton {
         margin-bottom: 5px;
         background-color: white;
     }
-}
 
-.content__entete img {
-    @include mobile {
-        width: 200px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    & img {
+        @include mobile {
+            width: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     }
+
+    & i {
+    position : absolute;
+    left: 20px;
+    top: 35px;
+    font-size: 22px;
+    }
+
 }
 
 .footer {
