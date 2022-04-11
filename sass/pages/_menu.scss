@@ -67,8 +67,16 @@
         box-shadow: $shadow;
 
         & > h3 {
-            margin: 15px 0 0 12px;
+            margin: 15px 0 0 9px;
+            font-weight: $bold;
         }
+    }
+
+    &__description {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 15px;
     }
 
     &__prix {
@@ -77,13 +85,17 @@
         margin: 0 10px;
 
         & > p {
-            margin: 10px 0;
+            margin: 5px 10px 10px 0px;
             padding-bottom: 2px;
         }
 
         & > i {
             display: none;
         }
+    }
+
+    &__bold {
+        font-weight: $bold;
     }
 }
 
