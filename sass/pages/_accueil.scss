@@ -1,12 +1,14 @@
 .liste {
-    @include mobile {
         @include section;
 
         &__localisation {
             @include displayrow;
-            background-color: $couleur-gris;
-            font-size: 20px;
-            box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+
+            @include mobile {
+                background-color: $couleur-gris;
+                font-size: 20px;
+                box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+            }
 
             & p {
                 font-weight: $bold;
@@ -39,7 +41,6 @@
             @include btn;
             margin: 20px 0 0 0;
         }
-    }
 }
 
 .fonctionnement {
@@ -97,6 +98,8 @@
 }
 
 .restaurant {
+
+    @include mobile {
     background-color: $couleur-gris;
     @include light;
     padding: 10px 0 50px 0;
@@ -164,4 +167,5 @@
     padding: 0 20px 0 0;
     font-size: 30px;
     }
+}
 }
