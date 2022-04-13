@@ -265,26 +265,37 @@ h1, h2, h3, p, .liste__bouton {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 70px;
+}
+@media screen and (max-width: 768px) {
+  .restaurant__grandblock > a {
+    margin-bottom: 20px;
+  }
 }
 .restaurant__petitblock {
   background-color: white;
-  width: 400px;
-  height: 250px;
-  margin-bottom: 20px;
+  width: 800px;
+  height: 500px;
   border-radius: 20px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 768px) {
   .restaurant__petitblock {
     width: 90%;
+    height: 250px;
   }
 }
 .restaurant__image img {
-  height: 170px;
+  height: 420px;
   width: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
   margin: 0 0 10px 0;
+}
+@media screen and (max-width: 768px) {
+  .restaurant__image img {
+    height: 170px;
+  }
 }
 .restaurant__description {
   display: flex;
