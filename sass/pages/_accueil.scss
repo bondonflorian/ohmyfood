@@ -1,5 +1,9 @@
 .liste {
         @include section;
+        align-items: center;
+        @include mobile {
+            align-items: initial;
+        }
 
         &__localisation {
             @include displayrow;
@@ -21,11 +25,18 @@
 
         &__reservation {
             @include displaycolumn;
+            width: 30%;
             text-align: center;
             padding: 30px 20px 60px 20px;
             font-size: 15px;
             background-color: $couleur-gris;
+            border-radius: $radius;
             @include light;
+
+            @include mobile {
+                width: auto;
+                border-radius: 0;
+            }
 
             & h1 {
                 font-weight: $bold;

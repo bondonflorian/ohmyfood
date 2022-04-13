@@ -84,6 +84,12 @@ h1, h2, h3, p, .liste__bouton {
 .liste {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .liste {
+    align-items: initial;
+  }
 }
 .liste__localisation {
   display: flex;
@@ -109,11 +115,19 @@ h1, h2, h3, p, .liste__bouton {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 30%;
   text-align: center;
   padding: 30px 20px 60px 20px;
   font-size: 15px;
   background-color: #e6e6e5;
+  border-radius: 25px;
   background: #f3f3f2;
+}
+@media screen and (max-width: 768px) {
+  .liste__reservation {
+    width: auto;
+    border-radius: 0;
+  }
 }
 .liste__reservation h1 {
   font-weight: bold;
