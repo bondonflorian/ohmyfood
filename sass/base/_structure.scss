@@ -63,13 +63,17 @@ h1, h2, h3, p, .liste__bouton {
     }
 
     & p {
-        margin: 0 0 0px 30px;
+        margin: 0 0 0 30px;
         font-size: 18px;
         font-weight: $bold;
 
         @include mobile {
             margin: 0 0 10px 30px;
             font-size: 22px;
+        }
+
+        @include tablette {
+            margin: 0 0 0 20px;
         }
     }
 

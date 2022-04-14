@@ -73,7 +73,7 @@ h1, h2, h3, p, .liste__bouton {
   }
 }
 .footer p {
-  margin: 0 0 0px 30px;
+  margin: 0 0 0 30px;
   font-size: 18px;
   font-weight: bold;
 }
@@ -81,6 +81,11 @@ h1, h2, h3, p, .liste__bouton {
   .footer p {
     margin: 0 0 10px 30px;
     font-size: 22px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .footer p {
+    margin: 0 0 0 20px;
   }
 }
 .footer h4 {
@@ -124,6 +129,15 @@ h1, h2, h3, p, .liste__bouton {
     box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
   }
 }
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .liste__localisation {
+    background-color: #e6e6e5;
+    font-size: 20px;
+    box-shadow: inset 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
 .liste__localisation p {
   font-weight: bold;
 }
@@ -147,6 +161,11 @@ h1, h2, h3, p, .liste__bouton {
   .liste__reservation {
     width: auto;
     border-radius: 0;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .liste__reservation {
+    width: 80%;
   }
 }
 .liste__reservation h1 {
@@ -177,6 +196,11 @@ h1, h2, h3, p, .liste__bouton {
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
+  .fonctionnement h2 {
+    margin: 60px 0 30px 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .fonctionnement h2 {
     margin: 60px 0 30px 15px;
   }
@@ -220,6 +244,11 @@ h1, h2, h3, p, .liste__bouton {
     justify-content: start;
     width: 85%;
     height: 70px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .fonctionnement__block {
+    width: 30%;
   }
 }
 .fonctionnement__block p {
@@ -270,6 +299,11 @@ h1, h2, h3, p, .liste__bouton {
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
+  .restaurant h2 {
+    margin: 60px 0 30px 15px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .restaurant h2 {
     margin: 60px 0 30px 15px;
   }
@@ -369,8 +403,12 @@ h1, h2, h3, p, .liste__bouton {
   flex-direction: column;
   background-color: #e6e6e5;
   background: #f3f3f2;
-  border-radius: 50px 50px 0 0;
-  margin-top: -80px;
+}
+@media screen and (max-width: 768px) {
+  .menu {
+    margin-top: -80px;
+    border-radius: 50px 50px 0 0;
+  }
 }
 .menu > h3 {
   position: relative;
@@ -380,6 +418,11 @@ h1, h2, h3, p, .liste__bouton {
 @media screen and (max-width: 768px) {
   .menu > h3 {
     margin: 20px 0 20px 25px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu > h3 {
+    margin: 20px 0 20px 130px;
   }
 }
 .menu > h3:after {
@@ -398,10 +441,20 @@ h1, h2, h3, p, .liste__bouton {
 }
 .menu__titre {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0 40px 0 25px;
   margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .menu__titre {
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu__titre {
+    justify-content: space-between;
+  }
 }
 .menu__titre > h2 {
   font-family: "shrikhand";
@@ -432,6 +485,11 @@ h1, h2, h3, p, .liste__bouton {
     display: initial;
     height: auto;
     width: 90%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .menu__plat {
+    width: 70%;
   }
 }
 .menu__plat > h3 {

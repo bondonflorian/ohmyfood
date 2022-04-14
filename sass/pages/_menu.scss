@@ -17,8 +17,10 @@
         flex-direction: column;
         background-color: $couleur-gris;
         @include light;
-        border-radius: 50px 50px 0 0;
+        @include mobile {
         margin-top: -80px;
+        border-radius: 50px 50px 0 0;
+        }
 
         & > h3 {
             position: relative;
@@ -27,6 +29,10 @@
 
             @include mobile {
                 margin: 20px 0 20px 25px;
+            }
+
+            @include tablette {
+                margin: 20px 0 20px 130px;
             }
 
             &:after {
@@ -46,10 +52,16 @@
 
     &__titre {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;
         padding: 0 40px 0 25px;
         margin-top: 20px;
+        @include mobile {
+            justify-content: space-between;
+        }
+        @include tablette {
+            justify-content: space-between;
+        }
 
         & > h2 {
             @include police-titre;
@@ -80,6 +92,10 @@
             display: initial;
             height: auto;
             width: 90%;
+        }
+
+        @include tablette {
+            width: 70%;
         }
 
         & > h3 {
