@@ -97,6 +97,9 @@ h1, h2, h3, p, .liste__bouton {
   margin-right: 10px;
   font-size: 18px;
 }
+.footer a {
+  color: white;
+}
 
 .liste {
   display: flex;
@@ -361,28 +364,36 @@ h1, h2, h3, p, .liste__bouton {
   object-fit: cover;
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #e6e6e5;
+  background: #f3f3f2;
+  border-radius: 50px 50px 0 0;
+  margin-top: -80px;
+}
+.menu > h3 {
+  position: relative;
+  text-transform: uppercase;
+  margin: 50px 0 20px 600px;
+}
 @media screen and (max-width: 768px) {
-  .menu {
-    display: flex;
-    flex-direction: column;
-    background-color: #e6e6e5;
-    background: #f3f3f2;
-    border-radius: 50px 50px 0 0;
-    margin-top: -80px;
-  }
   .menu > h3 {
-    position: relative;
-    text-transform: uppercase;
     margin: 20px 0 20px 25px;
   }
+}
+.menu > h3:after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background: #99E2D0;
+  position: absolute;
+  left: 0px;
+  bottom: -5px;
+}
+@media screen and (max-width: 768px) {
   .menu > h3:after {
-    content: "";
-    width: 50px;
-    height: 3px;
-    background: #99E2D0;
-    position: absolute;
     left: 0px;
-    bottom: -5px;
   }
 }
 .menu__titre {
@@ -406,11 +417,22 @@ h1, h2, h3, p, .liste__bouton {
   align-items: center;
 }
 .menu__plat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: white;
   margin: 0 0 15px 0;
-  width: 90%;
+  width: 30%;
+  height: 100px;
   border-radius: 15px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 768px) {
+  .menu__plat {
+    display: initial;
+    height: auto;
+    width: 90%;
+  }
 }
 .menu__plat > h3 {
   margin: 15px 0 0 9px;
