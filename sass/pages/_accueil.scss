@@ -222,6 +222,11 @@
         height: 500px;
         border-radius: 20px;
         box-shadow: $shadow;
+        transition: all .4s ease-out;
+
+        &:hover, &:active {
+            transform: scale(1.08);
+        }
         @include mobile {
             width: 90%;
             height: 250px;

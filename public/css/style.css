@@ -360,6 +360,10 @@ h1, h2, h3, p, .liste__bouton {
   height: 500px;
   border-radius: 20px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-out;
+}
+.restaurant__petitblock:hover, .restaurant__petitblock:active {
+  transform: scale(1.08);
 }
 @media screen and (max-width: 768px) {
   .restaurant__petitblock {
@@ -507,8 +511,7 @@ h1, h2, h3, p, .liste__bouton {
 }
 .menu__plat {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   background-color: white;
   margin: 0 0 15px 0;
   width: 100%;
@@ -516,7 +519,7 @@ h1, h2, h3, p, .liste__bouton {
   border-radius: 15px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
   opacity: 0;
-  animation: plat-apparation 1s cubic-bezier(0.24, 0.68, 0.61, 1.02) alternate forwards;
+  animation: plat-apparition 1s cubic-bezier(0.24, 0.68, 0.61, 1.02) alternate forwards;
 }
 .menu__plat .plats-1 {
   animation-delay: 300ms;
@@ -553,8 +556,8 @@ h1, h2, h3, p, .liste__bouton {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
   animation: checkbox-apparition 400ms linear alternate forwards;
 }
 .menu__plat:hover i, .menu__plat:active i {
@@ -575,7 +578,7 @@ h1, h2, h3, p, .liste__bouton {
     width: 70%;
   }
 }
-.menu__plat > h3 {
+.menu__plat h3 {
   margin: 15px 0 0 9px;
   font-weight: bold;
 }
@@ -604,6 +607,13 @@ h1, h2, h3, p, .liste__bouton {
 .menu__prix > p {
   margin: 5px 10px 10px 0px;
   padding-bottom: 2px;
+}
+.menu__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
 }
 .menu__bold {
   font-weight: bold;
@@ -656,7 +666,7 @@ h1, h2, h3, p, .liste__bouton {
     background: #99E2D0;
   }
 }
-@keyframes plat-apparation {
+@keyframes plat-apparition {
   0% {
     opacity: 0;
     transform: translateY(20px);

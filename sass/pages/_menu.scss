@@ -109,8 +109,7 @@
 
     &__plat {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         background-color: white;
         margin: 0 0 15px 0;
         width: 100%;
@@ -118,7 +117,7 @@
         border-radius: 15px;
         box-shadow: $shadow;
         opacity: 0;
-        animation: plat-apparation 1s cubic-bezier(.24,.68,.61,1.02) alternate forwards;
+        animation: plat-apparition 1s cubic-bezier(.24,.68,.61,1.02) alternate forwards;
 
         @for $i from 1 through 10 {
             .plats-#{$i} {
@@ -152,7 +151,7 @@
             width: 70%;
         }
 
-        & > h3 {
+        &  h3 {
             margin: 15px 0 0 9px;
             font-weight: $bold;
         }
@@ -184,6 +183,11 @@
             padding-bottom: 2px;
         }
 
+    }
+
+    &__text {
+        @include displaycolumn;
+        align-items: flex-start;
     }
 
     &__bold {
