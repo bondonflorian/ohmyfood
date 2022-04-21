@@ -117,6 +117,30 @@
         height: 100px;
         border-radius: 15px;
         box-shadow: $shadow;
+        opacity: 0;
+        animation: plat-apparation 1s cubic-bezier(.24,.68,.61,1.02) alternate forwards;
+
+        @for $i from 1 through 10 {
+            .plats-#{$i} {
+              animation-delay: ($i * 200) + 100ms;
+            }
+        }
+
+        &:hover, &:active {
+            .menu__checkbox {
+                @include displayrow;
+                border-top-right-radius: nth($radius_anim, 3);
+                border-bottom-right-radius: nth($radius_anim, 3);
+                animation: checkbox-apparition 400ms linear alternate forwards;
+                }
+                i {
+                  animation: checkspin 400ms linear alternate forwards;
+                }
+            .menu__plat {
+              animation: plat 400ms linear alternate forwards;
+            }
+        }
+
 
         @include mobile {
             display: initial;
@@ -132,6 +156,15 @@
             margin: 15px 0 0 9px;
             font-weight: $bold;
         }
+    }
+
+    .menu__checkbox {
+        opacity: 0;
+        color: white;
+        background: $couleur-tertiaire;
+        width: 0;
+        font-size: 1.5em;
+        height: 100%;
     }
 
     &__description {
@@ -151,9 +184,6 @@
             padding-bottom: 2px;
         }
 
-        & > i {
-            display: none;
-        }
     }
 
     &__bold {

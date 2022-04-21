@@ -102,6 +102,11 @@
             border-radius: $radius;
             box-shadow: $shadow;
 
+            &:hover, &:active {
+            @include light-secondaire;
+            transition: all .4s ease-out;
+            }
+
             @include mobile {
                 @include displayrow;
                 justify-content: start;

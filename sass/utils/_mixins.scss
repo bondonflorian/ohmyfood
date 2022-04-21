@@ -56,6 +56,10 @@
     background: lighten($couleur-gris, 5%);
 }
 
+@mixin light-secondaire {
+    background: lighten($couleur-secondaire, 10%);
+}
+
 @mixin dark {
     color: darken($couleur-tertiaire, 40%);
 }

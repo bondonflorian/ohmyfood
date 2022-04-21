@@ -1,0 +1,49 @@
+@keyframes plat {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes checkspin {
+    0% {
+         transform: rotate(0);
+    } 
+    100% {
+         transform: rotate(1turn);
+    }
+ }
+
+ @keyframes checkbox-apparition {
+    0% {
+        width: 0;
+        opacity: 1;
+        background: $couleur-tertiaire;
+    }
+    100% {
+        opacity: 1;
+        width: 15%;
+        background: $couleur-tertiaire;
+    }
+}
+
+@keyframes plat-apparation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        transform-origin: bottom;
+    }
+}
