@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&family=Shrikhand&display=swap');
-body {
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+* {
+  box-sizing: border-box;
 }
+*::before, *::after {
+    box-sizing: border-box;
+  }
 
 a {
     text-decoration: none;
@@ -96,4 +100,8 @@ h1, h2, h3, p, .liste__bouton {
         color: white;
     }
 
+}
+
+.heart:hover {
+    background-color: pink;
 }

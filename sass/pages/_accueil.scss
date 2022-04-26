@@ -63,6 +63,10 @@
         &__bouton {
             @include btn;
             margin: 20px 0 0 0;
+
+            &:hover, &:active {
+                background: linear-gradient(175deg, $couleur-secondaire 100%, $couleur-primaire 70%);
+            }
         }
 }
 

@@ -52,6 +52,10 @@
     font-family: 'roboto';
 }
 
+@mixin degrader_light {
+    background: lighten($degrader, 10%);
+}
+
 @mixin light  {
     background: lighten($couleur-gris, 5%);
 }
@@ -71,3 +75,14 @@
 @mixin police-titre {
     font-family: 'shrikhand';
 }
+
+@mixin heartactive {
+    &:hover, &:active{
+    cursor: pointer;
+    animation:heart-appear 500ms cubic-bezier(.58,.12,.3,.93)  alternate forwards;
+    }
+  }
+
+  @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+    transition: $property $duration $ease;
+  }
