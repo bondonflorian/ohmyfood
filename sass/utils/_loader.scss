@@ -1,0 +1,50 @@
+/* #loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background: black;
+    opacity: 0.7;
+    animation: disparition 0s linear 3s forwards;
+    @include displayrow;
+
+    &__content {
+        height: 5em;
+        width: 5em;
+        border-radius: 50%;
+        border: 10px solid transparent;
+        border-bottom: solid 5px $couleur-secondaire;
+        background: transparent;
+        z-index: 2;
+        padding: 15px;
+        @include displayrow;
+        position: relative;
+        animation: spin 1s linear infinite;
+
+        &:before {
+            content: '';
+            height: 1em;
+            width: 1em;
+            border-radius: 50%;
+            background: $couleur-primaire;
+            position: absolute;
+            animation: zoom 3s linear infinite;
+        }
+        
+        &:after  {
+            content: '';
+            height: 3em;
+            width: 3em;
+            border-radius: 50%;
+            border: 10px solid transparent;
+            border-bottom: solid 5px $couleur-tertiaire;
+            background: transparent;
+            z-index: 2;
+            padding: 15px;
+            @include displayrow;
+            position: relative;
+            animation: spin2 1s linear infinite;
+
+        }
+    }
+} */

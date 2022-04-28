@@ -212,7 +212,16 @@
         font-size: 15px;
     }
 
-
+    &__heartcontainer {
+        position: absolute;
+        bottom: 20px;
+        right: 25px;
+      }
+    &__heart {
+          display: flex;
+          font-size: 30px;
+          position: relative;
+      }
 
     &__bold {
         font-weight: $bold;
@@ -233,6 +242,10 @@
 
 .bouton {
     @include displayrow;
+    margin-bottom: 100px;
+    @include mobile {
+        margin-bottom: 0;
+    }
 }
 
 body {
