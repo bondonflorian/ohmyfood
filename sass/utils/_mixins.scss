@@ -83,6 +83,15 @@
     }
   }
 
-  @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
     transition: $property $duration $ease;
   }
+
+@mixin bouton-anim {
+    content: attr(data-attr);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: $padding-bouton;
+    transition: 0.5S;
+}

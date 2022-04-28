@@ -105,26 +105,31 @@
 
     &__liste {
     @include displaycolumn;
+    margin: 0 0 100px 0;
+
+    @include mobile {
+        margin: 0;
+    }
+    }
+
+    @for $i from 1 through 10 {
+        .plats-#{$i} {
+          animation-delay: ($i * 200) + 100ms;
+        }
     }
 
     &__plat {
-/*         display: flex;
-        justify-content: space-between;
+        opacity: 0;
+        display: flex;
         background-color: white;
-        margin: 0 0 15px 0;
         width: 100%;
         height: 100px;
         border-radius: 15px;
         box-shadow: $shadow;
-        opacity: 0; */
-        animation: plat-apparition 2s cubic-bezier(.24,.68,.61,1.02) alternate forwards; 
-
-        @for $i from 1 through 10 {
-            .plats-#{$i} {
-              animation-delay: ($i * 200) + 100ms;
-            }
-        }
-
+        cursor: pointer;
+        margin: 0 0 20px 0;
+        padding-left: 10px;
+        animation: plat-apparition 2s cubic-bezier(.24,.68,.61,1.02) alternate forwards;
         &:hover, &:active {
             .menu__checkbox {
                 @include displayrow;
@@ -142,9 +147,8 @@
 
 
         @include mobile {
-            display: initial;
-            height: auto;
             width: 90%;
+            height: 80px;
         }
 
         @include tablette {
@@ -152,8 +156,43 @@
         }
 
         &  h3 {
-            margin: 15px 0 0 9px;
+            margin: 15px 0 0 0;
             font-weight: $bold;
+        }
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: calc(90%);
+            height: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @include mobile {
+                text-overflow: ellipsis;
+            }
+        }
+
+        &__prix {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 10%;
+            height: 100%;
+            margin: 0 3% 0 3%;
+            padding-bottom: 5px;
+    
+            & > p, & > h3 {
+                margin: 5px 10px 10px 0px;
+                padding-bottom: 2px;
+
+                @include mobile {
+                    margin: 0;
+                    padding-bottom: 0;
+                }
+            }
+    
         }
     }
 
@@ -173,22 +212,7 @@
         font-size: 15px;
     }
 
-    &__prix {
-        @include displayrow;
-        justify-content: space-between;
-        margin: 0 10px;
 
-        & > p, & > h3 {
-            margin: 5px 10px 10px 0px;
-            padding-bottom: 2px;
-        }
-
-    }
-
-    &__text {
-        @include displaycolumn;
-        align-items: flex-start;
-    }
 
     &__bold {
         font-weight: $bold;
@@ -196,43 +220,19 @@
 }
 
 .commander {
+    display: none;
+    @include mobile {
+        display: initial;
     @include commander;
 
     &:hover, &:active {
         background: linear-gradient(175deg, $couleur-secondaire 100%, $couleur-primaire 70%);
     }
+    }
 }
 
 .bouton {
     @include displayrow;
-}
-
-.plat__test {
-    display: flex;
-    background-color: white;
-    width: 100%;
-    height: 100px;
-    border-radius: 15px;
-    box-shadow: $shadow;
-}
-
-.plat__text__test {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: calc(90%);
-    height: 100%;
-    overflow: hidden;
-}
-
-.plat__prix__test {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 10%;
-    height: 100%;
-    margin: 0 3% 0 3%;
-    padding-bottom: 2%;
 }
 
 body {
@@ -301,7 +301,7 @@ body {
         @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
         position: absolute;
         top: 0;
-        left: 0;
+        left: 20px;
         bottom: 0;
         padding: 0.75rem 0;
         margin: 0 0 0 1.85rem;

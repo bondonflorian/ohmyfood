@@ -178,7 +178,7 @@
     }
 
     & h3 {
-        margin: 5px 0 0 15px;
+        margin: 0 0 0 15px;
         font-weight: $bold;
     }
 
@@ -242,7 +242,7 @@
         width: 100%;
         object-fit: cover;
         border-radius: $radius-restaurant;
-        margin: 0 0 10px 0;
+        margin: 0 0 5px 0;
 
         @include mobile {
             height: 170px;
