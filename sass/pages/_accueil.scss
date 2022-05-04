@@ -116,7 +116,11 @@
             .fonctionnement__chiffre {
                 /* animation: chiffre .5s linear alternate forwards; */
                 transition: all 0.3s linear 0s;
-                bottom: 100px;
+                bottom: 40px;
+
+                @include mobile { 
+                    bottom: 0;
+                }
             }
             }
 
@@ -137,7 +141,7 @@
         }
 
         &__etape {
-            position: absolute;
+            position: relative;
             bottom: -50px;
             @include mobile {
                 position: relative;
@@ -149,8 +153,8 @@
 
         &__chiffre {
             @include displaycolumn;
-            position: absolute;
-            bottom: 120px;
+            position: relative;
+            bottom: 60px;
             background-color: $couleur-primaire;
             color: white;
             height: 25px;
@@ -163,12 +167,13 @@
                 right: 12px;
                 font-size: 14px;
                 bottom: 0;
+                transition: none;
             }
         }
 
         & i {
-            position: absolute;
-            bottom: 40px;
+            position: relative;
+            bottom: 0;
             font-size: 24px;
 
             @include mobile {
@@ -297,7 +302,7 @@
               color: $couleur-secondaire;
           }
         }
-        &:hover {
+        &:hover, &:active {
         color: transparent;
         transition: all 0.3s linear 0s;
         }

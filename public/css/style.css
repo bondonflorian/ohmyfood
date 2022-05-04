@@ -131,6 +131,8 @@ h1, h2, h3, p, .liste__bouton {
 
 /* Bouton animée commande + explorer nos restaurants */
 .center {
+  display: flex;
+  flex-wrap: wrap;
   text-transform: uppercase;
   font-size: 22px;
   font-family: verdana;
@@ -386,7 +388,12 @@ h1, h2, h3, p, .liste__bouton {
 .fonctionnement__block:hover .fonctionnement__chiffre, .fonctionnement__block:active .fonctionnement__chiffre {
   /* animation: chiffre .5s linear alternate forwards; */
   transition: all 0.3s linear 0s;
-  bottom: 100px;
+  bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .fonctionnement__block:hover .fonctionnement__chiffre, .fonctionnement__block:active .fonctionnement__chiffre {
+    bottom: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .fonctionnement__block {
@@ -408,7 +415,7 @@ h1, h2, h3, p, .liste__bouton {
   font-weight: bold;
 }
 .fonctionnement__etape {
-  position: absolute;
+  position: relative;
   bottom: -50px;
 }
 @media screen and (max-width: 768px) {
@@ -424,8 +431,8 @@ h1, h2, h3, p, .liste__bouton {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: 120px;
+  position: relative;
+  bottom: 60px;
   background-color: #9356DC;
   color: white;
   height: 25px;
@@ -439,11 +446,12 @@ h1, h2, h3, p, .liste__bouton {
     right: 12px;
     font-size: 14px;
     bottom: 0;
+    transition: none;
   }
 }
 .fonctionnement i {
-  position: absolute;
-  bottom: 40px;
+  position: relative;
+  bottom: 0;
   font-size: 24px;
 }
 @media screen and (max-width: 768px) {
@@ -569,7 +577,7 @@ h1, h2, h3, p, .liste__bouton {
   height: 100%;
   color: #FF79DA;
 }
-.restaurant__heart:hover {
+.restaurant__heart:hover, .restaurant__heart:active {
   color: transparent;
   transition: all 0.3s linear 0s;
 }
@@ -769,6 +777,11 @@ h1, h2, h3, p, .liste__bouton {
   margin: 15px 0 0 0;
   font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+  .menu__plat h3 {
+    margin: 5px 0 0 0;
+  }
+}
 .menu__plat__text {
   display: flex;
   flex-direction: column;
@@ -777,10 +790,16 @@ h1, h2, h3, p, .liste__bouton {
   height: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__plat__text > p, .menu__plat__text h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 @media screen and (max-width: 768px) {
-  .menu__plat__text {
-    text-overflow: ellipsis;
+  .menu__plat__text > p, .menu__plat__text h3 {
+    margin: 5px 0 0 0;
   }
 }
 .menu__plat__prix {
@@ -829,7 +848,7 @@ h1, h2, h3, p, .liste__bouton {
   position: absolute;
   left: 0;
 }
-.menu__heart__contenu:hover {
+.menu__heart__contenu:hover, .menu__heart__contenu:active {
   height: 100%;
   color: #FF79DA;
 }

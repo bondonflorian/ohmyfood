@@ -118,6 +118,8 @@ h1, h2, h3, p, .liste__bouton {
 
 /* Bouton animée commande + explorer nos restaurants */
   .center   {
+      display: flex;
+      flex-wrap: wrap;
     text-transform: uppercase;
     font-size: 22px;
     font-family: verdana;

@@ -158,6 +158,10 @@
         &  h3 {
             margin: 15px 0 0 0;
             font-weight: $bold;
+
+            @include mobile {
+                margin: 5px 0 0 0;
+            }
         }
 
         &__text {
@@ -168,11 +172,19 @@
             height: 100%;
             overflow: hidden;
             text-overflow: ellipsis;
+            white-space: nowrap;
 
-            @include mobile {
+            & > p, h3 {
+                overflow: hidden;
                 text-overflow: ellipsis;
+                white-space: nowrap;
+
+                @include mobile {
+                margin: 5px 0 0 0;
+                }
             }
-        }
+
+            }
 
         &__prix {
             display: flex;
@@ -225,7 +237,7 @@
             position: absolute;
             left: 0;
             
-            &:hover {
+            &:hover, &:active {
                 height: 100%;
                 color: $couleur-secondaire;
             }
