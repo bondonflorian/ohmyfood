@@ -116,11 +116,10 @@ h1, h2, h3, p, .liste__bouton {
 
 }
 
-/* Bouton animée Commander en bas des pages de menu version bureau */
-  .center > a  {
-    text-decoration: none;
+/* Bouton animée commande + explorer nos restaurants */
+  .center   {
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 22px;
     font-family: verdana;
 
     @include mobile {
@@ -136,12 +135,20 @@ h1, h2, h3, p, .liste__bouton {
             transform: rotateX(0deg) translateY(0%);
         }
 
+        & span:nth-child(3):before {
+            transform: rotateX(0deg) translateY(0%);
+        }
+
         & span:nth-child(1):after {
             transform: rotateX(90deg) translateY(50%);
         }
 
         & span:nth-child(2):after {
             transform: rotateX(90deg) translateY(-50%);
+        }
+
+        & span:nth-child(3):after {
+            transform: rotateX(90deg) translateY(50%);
         }
 
     }
@@ -153,7 +160,7 @@ h1, h2, h3, p, .liste__bouton {
 
       &:nth-child(1) {
           color:$white;
-          background: $couleur-primaire;
+          /* background: $couleur-primaire; */
 
           &:before {
               @include bouton-anim;
@@ -171,7 +178,7 @@ h1, h2, h3, p, .liste__bouton {
       }
       &:nth-child(2) {
           color: $white;
-          background: $couleur-secondaire;
+          /* background: $couleur-secondaire; */
 
           &:before {
               @include bouton-anim;
@@ -187,6 +194,25 @@ h1, h2, h3, p, .liste__bouton {
               transform: rotateX(0deg) translateY(0%);
           }
       }
+
+      &:nth-child(3) {
+        color:$white;
+        /* background: $couleur-primaire; */
+
+        &:before {
+            @include bouton-anim;
+            background: $couleur-secondaire;
+            transform-origin: top;
+            transform: rotateX(90deg) translateY(-50%);
+        }
+
+        &:after {
+            @include bouton-anim;
+            background: $couleur-primaire;
+            transform-origin: bottom;
+            transform: rotateX(0deg) translateY(0%);
+        }
+    }
 
   }
 }

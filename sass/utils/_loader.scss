@@ -3,9 +3,9 @@
     width: 100%;
     position: fixed;
     z-index: 2;
-    background: black;
-    opacity: 0.7;
-    animation: disparition 0s linear 3s forwards;
+    background: $white;
+    opacity: 1;
+    animation: disparition 0s linear  3s forwards;
     @include displayrow;
 
     &__content {

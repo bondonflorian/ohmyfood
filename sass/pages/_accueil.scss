@@ -61,6 +61,9 @@
         }
 
         &__bouton {
+            display: none;
+            @include mobile {
+                display: initial;
             @include btn;
             margin: 20px 0 0 0;
 
@@ -68,6 +71,7 @@
                 background: linear-gradient(175deg, $couleur-secondaire 100%, $couleur-primaire 70%);
             }
         }
+    }
 }
 
 .fonctionnement {
@@ -97,7 +101,6 @@
 
         &__block {
             @include displaycolumn;
-            justify-content: space-around;
             width: 20%;
             height: 200px;
             margin-bottom: 20px;
@@ -105,10 +108,16 @@
             @include light;
             border-radius: $radius;
             box-shadow: $shadow;
+            transition: all 0.3s linear 0s;
 
             &:hover, &:active {
             @include light-secondaire;
-            transition: all .4s ease-out;
+
+            .fonctionnement__chiffre {
+                /* animation: chiffre .5s linear alternate forwards; */
+                transition: all 0.3s linear 0s;
+                bottom: 100px;
+            }
             }
 
             @include mobile {
@@ -128,31 +137,44 @@
         }
 
         &__etape {
+            position: absolute;
+            bottom: -50px;
             @include mobile {
-            margin-left: 80px;
+                position: relative;
+                bottom: 0;
+                right: 20px;
+                margin-left: 80px;
             }
         }
 
         &__chiffre {
             @include displaycolumn;
+            position: absolute;
+            bottom: 120px;
             background-color: $couleur-primaire;
             color: white;
             height: 25px;
             width: 25px;
             border-radius: 80px;
+            transition: all 0.3s linear 0s;
 
             @include mobile {
-                position: absolute;
-                left: 15px;
+                position: relative;
+                right: 12px;
                 font-size: 14px;
+                bottom: 0;
             }
         }
 
         & i {
+            position: absolute;
+            bottom: 40px;
             font-size: 24px;
+
             @include mobile {
-                position: absolute;
-                left: 65px;
+                position: relative;
+                left: 30px;
+                bottom: 0;
                 color: grey;
                 font-size: 18px;
             }
@@ -226,10 +248,10 @@
         height: 500px;
         border-radius: 20px;
         box-shadow: $shadow;
-        transition: all .4s ease-out;
+        transition: all .3s ease-out;
 
         &:hover, &:active {
-            transform: scale(1.08);
+            transform: scale(1.03);
         }
         @include mobile {
             width: 90%;
@@ -255,8 +277,29 @@
         justify-content: space-between;
     }
 
-    &__coeur {
-    padding: 0 20px 0 0;
-    font-size: 30px;
+    &__heart {
+        display: flex;
+        padding: 0 20px 0 0;
+        font-size: 30px;
+        position: relative;
+        
+
+        &__contenu {
+          transition: all 0.3s linear 0s;
+          color: transparent;
+          width: 100%;
+          height: 0;
+          position: absolute;
+          left: 0;
+          
+          &:hover {
+              height: 100%;
+              color: $couleur-secondaire;
+          }
+        }
+        &:hover {
+        color: transparent;
+        transition: all 0.3s linear 0s;
+        }
     }
 }

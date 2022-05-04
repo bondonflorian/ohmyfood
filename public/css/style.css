@@ -129,40 +129,45 @@ h1, h2, h3, p, .liste__bouton {
   color: white;
 }
 
-/* Bouton animée Commander en bas des pages de menu version bureau */
-.center > a {
-  text-decoration: none;
+/* Bouton animée commande + explorer nos restaurants */
+.center {
   text-transform: uppercase;
-  font-size: 32px;
+  font-size: 22px;
   font-family: verdana;
 }
 @media screen and (max-width: 768px) {
-  .center > a {
+  .center {
     display: none;
   }
 }
-.center > a:hover span:nth-child(1):before {
+.center:hover span:nth-child(1):before {
   transform: rotateX(0deg) translateY(0%);
 }
-.center > a:hover span:nth-child(2):before {
+.center:hover span:nth-child(2):before {
   transform: rotateX(0deg) translateY(0%);
 }
-.center > a:hover span:nth-child(1):after {
+.center:hover span:nth-child(3):before {
+  transform: rotateX(0deg) translateY(0%);
+}
+.center:hover span:nth-child(1):after {
   transform: rotateX(90deg) translateY(50%);
 }
-.center > a:hover span:nth-child(2):after {
+.center:hover span:nth-child(2):after {
   transform: rotateX(90deg) translateY(-50%);
 }
-.center > a > span {
+.center:hover span:nth-child(3):after {
+  transform: rotateX(90deg) translateY(50%);
+}
+.center > span {
   padding: 15px;
   transition: 0.5s;
   position: relative;
 }
-.center > a > span:nth-child(1) {
+.center > span:nth-child(1) {
   color: #fff;
-  background: #9356DC;
+  /* background: $couleur-primaire; */
 }
-.center > a > span:nth-child(1):before {
+.center > span:nth-child(1):before {
   content: attr(data-attr);
   position: absolute;
   top: 0;
@@ -173,7 +178,7 @@ h1, h2, h3, p, .liste__bouton {
   transform-origin: top;
   transform: rotateX(90deg) translateY(-50%);
 }
-.center > a > span:nth-child(1):after {
+.center > span:nth-child(1):after {
   content: attr(data-attr);
   position: absolute;
   top: 0;
@@ -184,11 +189,11 @@ h1, h2, h3, p, .liste__bouton {
   transform-origin: bottom;
   transform: rotateX(0deg) translateY(0%);
 }
-.center > a > span:nth-child(2) {
+.center > span:nth-child(2) {
   color: #fff;
-  background: #FF79DA;
+  /* background: $couleur-secondaire; */
 }
-.center > a > span:nth-child(2):before {
+.center > span:nth-child(2):before {
   content: attr(data-attr);
   position: absolute;
   top: 0;
@@ -199,7 +204,7 @@ h1, h2, h3, p, .liste__bouton {
   transform-origin: bottom;
   transform: rotateX(90deg) translateY(50%);
 }
-.center > a > span:nth-child(2):after {
+.center > span:nth-child(2):after {
   content: attr(data-attr);
   position: absolute;
   top: 0;
@@ -208,6 +213,32 @@ h1, h2, h3, p, .liste__bouton {
   transition: 0.5S;
   background: #FF79DA;
   transform-origin: top;
+  transform: rotateX(0deg) translateY(0%);
+}
+.center > span:nth-child(3) {
+  color: #fff;
+  /* background: $couleur-primaire; */
+}
+.center > span:nth-child(3):before {
+  content: attr(data-attr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  transition: 0.5S;
+  background: #FF79DA;
+  transform-origin: top;
+  transform: rotateX(90deg) translateY(-50%);
+}
+.center > span:nth-child(3):after {
+  content: attr(data-attr);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 15px;
+  transition: 0.5S;
+  background: #9356DC;
+  transform-origin: bottom;
   transform: rotateX(0deg) translateY(0%);
 }
 
@@ -281,18 +312,24 @@ h1, h2, h3, p, .liste__bouton {
   font-size: 19px;
 }
 .liste__bouton {
-  width: 250px;
-  height: 60px;
-  border-radius: 50px;
-  background: linear-gradient(175deg, #FF79DA 0%, #9356DC 70%);
-  border: none;
-  font-size: 18px;
-  color: white;
-  font-weight: bold;
-  margin: 20px 0 0 0;
+  display: none;
 }
-.liste__bouton:hover, .liste__bouton:active {
-  background: linear-gradient(175deg, #FF79DA 100%, #9356DC 70%);
+@media screen and (max-width: 768px) {
+  .liste__bouton {
+    display: initial;
+    width: 250px;
+    height: 60px;
+    border-radius: 50px;
+    background: linear-gradient(175deg, #FF79DA 0%, #9356DC 70%);
+    border: none;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin: 20px 0 0 0;
+  }
+  .liste__bouton:hover, .liste__bouton:active {
+    background: linear-gradient(175deg, #FF79DA 100%, #9356DC 70%);
+  }
 }
 
 .fonctionnement {
@@ -334,7 +371,6 @@ h1, h2, h3, p, .liste__bouton {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: space-around;
   width: 20%;
   height: 200px;
   margin-bottom: 20px;
@@ -342,10 +378,15 @@ h1, h2, h3, p, .liste__bouton {
   background: #f3f3f2;
   border-radius: 25px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s linear 0s;
 }
 .fonctionnement__block:hover, .fonctionnement__block:active {
   background: #fface8;
-  transition: all 0.4s ease-out;
+}
+.fonctionnement__block:hover .fonctionnement__chiffre, .fonctionnement__block:active .fonctionnement__chiffre {
+  /* animation: chiffre .5s linear alternate forwards; */
+  transition: all 0.3s linear 0s;
+  bottom: 100px;
 }
 @media screen and (max-width: 768px) {
   .fonctionnement__block {
@@ -366,8 +407,15 @@ h1, h2, h3, p, .liste__bouton {
 .fonctionnement__block p {
   font-weight: bold;
 }
+.fonctionnement__etape {
+  position: absolute;
+  bottom: -50px;
+}
 @media screen and (max-width: 768px) {
   .fonctionnement__etape {
+    position: relative;
+    bottom: 0;
+    right: 20px;
     margin-left: 80px;
   }
 }
@@ -376,26 +424,33 @@ h1, h2, h3, p, .liste__bouton {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 120px;
   background-color: #9356DC;
   color: white;
   height: 25px;
   width: 25px;
   border-radius: 80px;
+  transition: all 0.3s linear 0s;
 }
 @media screen and (max-width: 768px) {
   .fonctionnement__chiffre {
-    position: absolute;
-    left: 15px;
+    position: relative;
+    right: 12px;
     font-size: 14px;
+    bottom: 0;
   }
 }
 .fonctionnement i {
+  position: absolute;
+  bottom: 40px;
   font-size: 24px;
 }
 @media screen and (max-width: 768px) {
   .fonctionnement i {
-    position: absolute;
-    left: 65px;
+    position: relative;
+    left: 30px;
+    bottom: 0;
     color: grey;
     font-size: 18px;
   }
@@ -468,10 +523,10 @@ h1, h2, h3, p, .liste__bouton {
   height: 500px;
   border-radius: 20px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
-  transition: all 0.4s ease-out;
+  transition: all 0.3s ease-out;
 }
 .restaurant__petitblock:hover, .restaurant__petitblock:active {
-  transform: scale(1.08);
+  transform: scale(1.03);
 }
 @media screen and (max-width: 768px) {
   .restaurant__petitblock {
@@ -496,9 +551,27 @@ h1, h2, h3, p, .liste__bouton {
   align-items: center;
   justify-content: space-between;
 }
-.restaurant__coeur {
+.restaurant__heart {
+  display: flex;
   padding: 0 20px 0 0;
   font-size: 30px;
+  position: relative;
+}
+.restaurant__heart__contenu {
+  transition: all 0.3s linear 0s;
+  color: transparent;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+}
+.restaurant__heart__contenu:hover {
+  height: 100%;
+  color: #FF79DA;
+}
+.restaurant__heart:hover {
+  color: transparent;
+  transition: all 0.3s linear 0s;
 }
 
 @media screen and (max-width: 768px) {
@@ -743,15 +816,26 @@ h1, h2, h3, p, .liste__bouton {
   white-space: nowrap;
   font-size: 15px;
 }
-.menu__heartcontainer {
-  position: absolute;
-  bottom: 20px;
-  right: 25px;
-}
 .menu__heart {
   display: flex;
   font-size: 30px;
   position: relative;
+}
+.menu__heart__contenu {
+  transition: all 0.3s linear 0s;
+  color: transparent;
+  width: 100%;
+  height: 0;
+  position: absolute;
+  left: 0;
+}
+.menu__heart__contenu:hover {
+  height: 100%;
+  color: #FF79DA;
+}
+.menu__heart:hover {
+  color: transparent;
+  transition: all 0.3s linear 0s;
 }
 .menu__bold {
   font-weight: bold;
@@ -863,7 +947,7 @@ button.learn-more .button-text {
   bottom: 0;
   padding: 0.75rem 0;
   margin: 0 0 0 1.85rem;
-  color: #9356DC;
+  color: #fff;
   font-weight: 700;
   line-height: 1.6;
   text-align: center;
@@ -990,14 +1074,30 @@ button:hover .button-text {
     transform: scale(2);
   }
 }
+@keyframes opacite-spinner {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes chiffre {
+  0% {
+    bottom: 120px;
+  }
+  100% {
+    bottom: 100px;
+  }
+}
 /* #loader {
     height: 100%;
     width: 100%;
     position: fixed;
     z-index: 2;
-    background: black;
-    opacity: 0.7;
-    animation: disparition 0s linear 3s forwards;
+    background: $white;
+    opacity: 1;
+    animation: disparition 0s linear  3s forwards;
     @include displayrow;
 
     &__content {
