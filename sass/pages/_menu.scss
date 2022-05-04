@@ -84,7 +84,7 @@
         margin-top: 20px;
         @include mobile {
             justify-content: space-between;
-            padding: 0 40px 0 25px;
+            margin-left: 25px;
             width: 80%;
         }
         @include tablette {
@@ -210,7 +210,7 @@
 
     .menu__checkbox {
         opacity: 0;
-        color: white;
+        color: $white;
         background: $couleur-tertiaire;
         width: 0;
         font-size: 1.5em;
@@ -246,6 +246,11 @@
           &:hover {
           color: transparent;
           transition: all 0.3s linear 0s;
+          }
+
+          @include mobile {
+              position: absolute;
+              right: 40px;
           }
       }
 
