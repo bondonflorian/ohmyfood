@@ -1,11 +1,10 @@
-/* #loader {
+#loader {
     height: 100%;
     width: 100%;
     position: fixed;
     z-index: 2;
     background: $white;
-    opacity: 1;
-    animation: disparition 0s linear  3s forwards;
+    animation: disparition 0s linear 3s forwards;
     @include displayrow;
 
     &__content {
@@ -44,7 +43,6 @@
             @include displayrow;
             position: relative;
             animation: spin2 1s linear infinite;
-
         }
     }
-} */
+}

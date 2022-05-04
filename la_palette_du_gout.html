@@ -14,7 +14,16 @@
     <!-- Le contenu de la page -->
     <main class="content">
         <header class="content__entete">
-            <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+            <a href="index.html"><i class="fa-solid fa-arrow-left"></i>
+                <div id="container">
+                    <div class="learn-more">
+                        <span class="circle" aria-hidden="true">
+                            <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Retour</span>
+                    </div>
+                </div>
+            </a>
             <img src="./images/logo/ohmyfood.png" alt="ohmyfood">
         </header>
         <div class="image">
@@ -24,36 +33,51 @@
             <section class="menu">
                 <div class="menu__titre">
                     <h2>La palette du goût</h2>
-                    <i class="fa-regular fa-heart"></i>
+                    <div class="menu__heart">
+                        <i class="far fa-heart menu__heart__contour"></i>
+                        <i class="fas fa-heart menu__heart__contenu"></i>
+                    </div>
                 </div>
                 <div class="menu__grandblock">
                     <div class="menu__grandliste">
                         <!-- La liste des entrées -->
                         <h3>ENTRÉES</h3>
                         <div class="menu__liste">
-                            <div class="menu__plat">
-                                <h3>Fricassée d'escargot</h3>
-                                <div class="menu__prix">
-                                    <p class="menu__description">Au piment d'Espelette</p>
-                                    <p class="menu__bold">25€</p>
-                                    <i class="fa-solid fa-circle-check"></i>
+                            <div class="menu__plat plats-1">
+                                <div class="menu__plat__text">
+                                    <h3>Fricassée d'escargot</h3>
+                                    <p>Au piment d'Espelette</p>
                                 </div>
+                                <div class="menu__plat__prix">
+                                    <p>25€</p>
+                                </div>
+                                <div class="menu__checkbox">
+                                   <i class="fa-solid fa-circle-check"></i>
+                                </div> 
                             </div>
-                            <div class="menu__plat">
-                                <h3>Foie gras de canard mi-cuit</h3>
-                                <div class="menu__prix">
-                                    <p class="menu__description">Et ses copeaux de truffe noire</p>
-                                    <p class="menu__bold">35€</p>
-                                    <i class="fa-solid fa-circle-check"></i>
+                            <div class="menu__plat plats-2">
+                                <div class="menu__plat__text">
+                                    <h3>Foie gras de canard mi-cuit</h3>
+                                    <p>Et ses copeaux de truffe noire</p>
                                 </div>
+                                <div class="menu__plat__prix">
+                                    <p>35€</p>
+                                </div>
+                                <div class="menu__checkbox">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div> 
                             </div>
-                            <div class="menu__plat">
-                                <h3>Oeuf au plat</h3>
-                                <div class="menu__prix">
-                                    <p class="menu__description">Assaisonné à la truffe sur lit de caviar</p>
-                                    <p class="menu__bold">20€</p>
-                                    <i class="fa-solid fa-circle-check"></i>
+                            <div class="menu__plat plats-3">
+                                <div class="menu__plat__text">
+                                    <h3>Oeuf au plat</h3>
+                                    <p>Assaisonné à la truffe sur lit de caviar</p>
                                 </div>
+                                <div class="menu__plat__prix">
+                                    <p>20€</p>
+                                </div>
+                                <div class="menu__checkbox">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -62,29 +86,41 @@
                         <!-- La liste des plats -->
                         <h3>PLATS</h3>
                         <div class="menu__liste">
-                            <div class="menu__plat">
-                                <h3>Filet de boeuf aux herbes</h3>
-                                <div class="menu__prix">
-                                    <p class="menu__description">Accompagné de sa ribambelle de légumes</p>
-                                    <p class="menu__bold">40€</p>
-                                    <i class="fa-solid fa-circle-check"></i>
+                            <div class="menu__plat plats-4">
+                                <div class="menu__plat__text">
+                                    <h3>Filet de boeuf aux herbes</h3>
+                                    <p>Accompagné de sa ribambelle de légumes</p>
                                 </div>
+                                <div class="menu__plat__prix">
+                                    <p>40€</p>
+                                </div>
+                                <div class="menu__checkbox">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div> 
                             </div>
-                            <div class="menu__plat">
-                                <h3>Parmentier de queue de boeuf</h3>
-                                <div class="menu__prix">
-                                    <p class="menu__description">À la truffe noire sur sa purée de panais</p>
-                                    <p class="menu__bold">35€</p>
-                                    <i class="fa-solid fa-circle-check"></i>
+                            <div class="menu__plat plats-5">
+                                <div class="menu__plat__text">
+                                    <h3>Parmentier de queue de boeuf</h3>
+                                    <p>À la truffe noire sur sa purée de panais</p>
                                 </div>
+                                <div class="menu__plat__prix">
+                                    <p>35€</p>
+                                </div>
+                                <div class="menu__checkbox">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div> 
                             </div>
-                            <div class="menu__plat">
-                                <h3>Filet de turbot</h3>
-                                <div class="menu__prix">
-                                    <p class="menu__description">Aux agrumes</p>
-                                    <p class="menu__bold">44€</p>
-                                    <i class="fa-solid fa-circle-check"></i>
+                            <div class="menu__plat plats-6">
+                                <div class="menu__plat__text">
+                                    <h3>Filet de turbot</h3>
+                                    <p>Aux agrumes</p>
                                 </div>
+                                <div class="menu__plat__prix">
+                                    <p>44€</p>
+                                </div>
+                                <div class="menu__checkbox">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -93,35 +129,53 @@
                         <!-- La liste des desserts -->
                         <h3>DESSERTS</h3>
                         <div class="menu__liste">
-                            <div class="menu__plat">
-                                <h3>Paris-Brest</h3>
-                                <div class="menu__prix">
-                                    <p class="menu__description">Revisité</p>
-                                    <p class="menu__bold">18€</p>
-                                    <i class="fa-solid fa-circle-check"></i>
+                            <div class="menu__plat plats-7">
+                                <div class="menu__plat__text">
+                                    <h3>Paris-Brest</h3>
+                                    <p>Revisité</p>
                                 </div>
+                                <div class="menu__plat__prix">
+                                    <p>18€</p>
+                                </div>
+                                <div class="menu__checkbox">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div> 
                             </div>
-                            <div class="menu__plat">
-                                <h3>Macaron au chocolat d'exception</h3>
-                                <div class="menu__prix">
-                                    <p class="menu__description">Et glace à la vanille de Madagascar</p>
-                                    <p class="menu__bold">22€</p>
-                                    <i class="fa-solid fa-circle-check"></i>
+                            <div class="menu__plat plats-8">
+                                <div class="menu__plat__text">
+                                    <h3>Macaron au chocolat d'exception</h3>
+                                    <p>Et glace à la vanille de Madagascar</p>
                                 </div>
+                                <div class="menu__plat__prix">
+                                    <p>22€</p>
+                                </div>
+                                <div class="menu__checkbox">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div> 
                             </div>
-                            <div class="menu__plat">
-                                <h3>Mousse au chocolat</h3>
-                                <div class="menu__prix">
-                                    <p class="menu__description">Au piment d'Espelette et à la truffe noire</p>
-                                    <p class="menu__bold">23€</p>
-                                    <i class="fa-solid fa-circle-check"></i>
+                            <div class="menu__plat plats-9">
+                                <div class="menu__plat__text">
+                                    <h3>Mousse au chocolat</h3>
+                                    <p>Au piment d'Espelette et à la truffe noire</p>
                                 </div>
+                                <div class="menu__plat__prix">
+                                    <p>23€</p>
+                                </div>
+                                <div class="menu__checkbox">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div> 
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="bouton">
                     <button class="commander">Commander</button>
+<!--                     <div class="center">
+                        <a href="#"><span data-attr="Comm"></span>Comm<span data-attr="ander">ander</span></a>
+                    </div> -->
+                    <div class="center">
+                        <span data-attr="commander">commander</span>
+                    </div>
                 </div>
             </section>
         </div>
@@ -133,7 +187,7 @@
             <p><i class="fa-solid fa-utensils"></i> Proposer un restaurant</p>
             <p><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</p>
             <p>Mentions légales</p>
-            <p>Contact</p>
+            <a href="mailto:monadresseemail@exemple.com"><p>Contact</p></a>
     </footer>
 
 </body>
