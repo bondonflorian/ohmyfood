@@ -322,15 +322,17 @@ h1, h2, h3, p, .liste__bouton {
     width: 250px;
     height: 60px;
     border-radius: 50px;
-    background: linear-gradient(175deg, #FF79DA 0%, #9356DC 70%);
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
     border: none;
     font-size: 18px;
     color: white;
     font-weight: bold;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
     margin: 20px 0 0 0;
   }
   .liste__bouton:hover, .liste__bouton:active {
-    background: linear-gradient(175deg, #FF79DA 100%, #9356DC 70%);
+    background: linear-gradient(0deg, rgba(174, 128, 229, 0.9), rgba(255, 172, 232, 0.9));
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -827,6 +829,7 @@ h1, h2, h3, p, .liste__bouton {
   width: 0;
   font-size: 1.5em;
   height: 100%;
+  overflow: hidden;
 }
 .menu__description {
   overflow: hidden;
@@ -874,15 +877,17 @@ h1, h2, h3, p, .liste__bouton {
     width: 200px;
     height: 60px;
     border-radius: 50px;
-    background: linear-gradient(175deg, #FF79DA 0%, #9356DC 70%);
+    background: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
     border: none;
     font-size: 18px;
     color: white;
     margin: 50px 0 100px 0;
     font-family: "roboto";
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
   }
   .commander:hover, .commander:active {
-    background: linear-gradient(175deg, #FF79DA 100%, #9356DC 70%);
+    background: linear-gradient(0deg, rgba(174, 128, 229, 0.9), rgba(255, 172, 232, 0.9));
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
   }
 }
 
