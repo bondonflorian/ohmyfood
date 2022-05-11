@@ -162,7 +162,6 @@ h1, h2, h3, p, .liste__bouton {
 
       &:nth-child(1) {
           color:$white;
-          /* background: $couleur-primaire; */
 
           &:before {
               @include bouton-anim;
@@ -180,7 +179,6 @@ h1, h2, h3, p, .liste__bouton {
       }
       &:nth-child(2) {
           color: $white;
-          /* background: $couleur-secondaire; */
 
           &:before {
               @include bouton-anim;
